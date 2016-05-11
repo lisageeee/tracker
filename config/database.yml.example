@@ -1,0 +1,13 @@
+development: &development
+  adapter: mysql2
+  encoding: latin1
+  reconnect: false
+  database: shenomads_development
+  pool: 5
+  username:
+  password:
+  socket: /tmp/mysql.sock
+
+test: &test
+  <<: *development
+  database: shenomads_test
