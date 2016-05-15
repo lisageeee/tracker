@@ -1,13 +1,13 @@
 class User < ActiveRecord::Base
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-
-  before_save { self.email = email.downcase }
-
-  validates :name,  presence: true, length: { maximum: 50 }
-  validates :email, presence: true, length: { maximum: 255 },
-    format: { with: VALID_EMAIL_REGEX },
-    uniqueness: true
-  validates :password, presence: true, length: { minimum: 6 }
-
-  has_secure_password
+  def self.omniauth(auth)
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      user.provider = auth.provider
+      user.uid = auth.uid
+      user.name = auth.info.name
+      user.image = auth.info.image
+      user.token = auth.credentials.token
+      user.expires_at = Time.at(auth.credentials.expires_at)
+      user.save!
+    end
+  end
 end
