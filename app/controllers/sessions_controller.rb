@@ -1,13 +1,14 @@
 class SessionsController < ApplicationController
+  include SessionsHelper
   def create
     user = User.omniauth(env['omniauth.auth'])
     session[:user_id] = user.id
 
-    #this currently works.  Change to dashboard.
-    redirect_to root_url
+    redirect_to '/dashboard'
   end
 
   def destroy
     session[:user_id] = nil
+    redirect_to root_url
   end
 end

@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160514235154) do
+ActiveRecord::Schema.define(version: 20160526185310) do
+
+  create_table "trips", force: :cascade do |t|
+    t.text     "city",       limit: 65535
+    t.text     "country",    limit: 65535
+    t.datetime "in"
+    t.datetime "out"
+    t.integer  "user_id",    limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "trips", ["user_id", "created_at"], name: "index_trips_on_user_id_and_created_at", using: :btree
+  add_index "trips", ["user_id"], name: "index_trips_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name",            limit: 255
@@ -26,4 +39,5 @@ ActiveRecord::Schema.define(version: 20160514235154) do
     t.datetime "expires_at"
   end
 
+  add_foreign_key "trips", "users"
 end

@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :trips, dependent: :destroy
+
   def self.omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider

@@ -11,12 +11,15 @@
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-        <%= link_to "Tracker", '#', id: "logo" %>
+        <%= link_to "SheNomads", '#', id: "logo" %>
         <nav>
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Dashboard",   '#' %></li>
+           <% if logged_in? %>
+            <li><%= link_to "Dashboard",   '/dashboard' %></li>
+            <li><%= link_to "Log Out", '/logout' %></li>
+           <% else %>
             <li><%= link_to "Log in", '/auth/facebook' %></li>
-            <li><%= link_to "Log Out", '#' %></li>
+           <% end %>
           </ul>
         </nav>
       </div>
