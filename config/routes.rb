@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   #dashboard
   get 'dashboards/new', to: 'dashboards#new'
   get '/dashboard', to: 'dashboards#user', as: 'dashboard'
+  post '/dashboard', to: 'dashboards#create'
 end
