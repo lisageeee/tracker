@@ -1,26 +1,13 @@
 <h1> Welcome to the Dashboard </h1>
-<%= render 'dashboards/no_trips' %>
 
 <div class="container-fluid">
   <div>
-    <% @trips.each do |trip| %>
-      <h3> What I've Leared About:</h3>
-    <h2><%= trip.city %>, <%= trip.country %>
-        <%= link_to "The Thought Card", "http://thoughtcard.com/the-ultimate-barbados-travel-guide/" %></h2>
-  <% end %>
-  </div>
+  <%= @user.name %>
+</div>
+  <%= image_tag @user.image %>
 </div>
 
-<div class="container-fluid">
-  <h3> Where I'm Going Next: </h3>
-  <div class="form-group">
-    <div class="col-xs-4">
-      <%= form_for(:trip ) do |f| %>
-        <%= f.text_field :city, class: 'form-control', placeholder: 'City'%>
-        <%= f.text_field :in, class: 'form-control', placeholder: 'When I Arrive'%>
-        <%= f.text_field :out, class: 'form-control', placeholder: 'When I Leave'%>
-      <%= f.submit "Go!", class: "btn btn-sm btn-primary" %>
-    <% end %>
-    </div>
-  </div>
-</div>
+<%= render 'dashboards/no_trips' %>
+<%= render 'dashboards/ask_me_about' %>
+<%= render 'dashboards/lets_meet' %>
+<%= render 'dashboards/add_a_trip' %>
