@@ -11,7 +11,14 @@ class DashboardsController < ApplicationController
 
   def show
     @dashboard = Dashboard.find(params[:id])
+  end
 
+  def create
+    params.permit!
+    @trip = Trip.new(params[:trip])
+    current_user.trips.push(@trip)
+
+    redirect_to '/dashboard'
   end
 
   def user
