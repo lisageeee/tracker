@@ -1,23 +1,26 @@
-<% if current_user.trips.count == 0 %>
-  <h1>You have no trips planned, <%= current_user.name %> . </h1>
-  <h1>Where are you going ? </h1>
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <%= form_for(:trip ) do |f| %>
-          <%= f.label :city %>
-          <%= f.text_field :city, class: 'form-control' %>
+<h1> Welcome to the Dashboard </h1>
+<%= render 'dashboards/no_trips' %>
 
-          <%= f.label :country %>
-          <%= f.text_field :country, class: 'form-control' %>
+<div class="container-fluid">
+  <div>
+    <% @trips.each do |trip| %>
+      <h3> What I've Leared About:</h3>
+    <h2><%= trip.city %>, <%= trip.country %>
+        <%= link_to "The Thought Card", "http://thoughtcard.com/the-ultimate-barbados-travel-guide/" %></h2>
+  <% end %>
+  </div>
+</div>
 
-          <%= f.submit "Add A Trip", class: "btn btn-primary" %>
-        <% end %>
-      </div>
+<div class="container-fluid">
+  <h3> Where I'm Going Next: </h3>
+  <div class="form-group">
+    <div class="col-xs-4">
+      <%= form_for(:trip ) do |f| %>
+        <%= f.text_field :city, class: 'form-control', placeholder: 'City'%>
+        <%= f.text_field :in, class: 'form-control', placeholder: 'When I Arrive'%>
+        <%= f.text_field :out, class: 'form-control', placeholder: 'When I Leave'%>
+      <%= f.submit "Go!", class: "btn btn-sm btn-primary" %>
+    <% end %>
     </div>
-  <% end %>
-<div>
-  <% @trips.each do |trip| %>
-    <%= trip.city =%>,
-    <%= trip.country =%>
-  <% end %>
+  </div>
 </div>
