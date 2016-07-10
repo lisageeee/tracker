@@ -11,9 +11,9 @@
       <ul class="nav navbar-nav navbar-right">
        <% if logged_in? %>
         <li><%= link_to "Dashboard",   '/dashboard' %></li>
-        <li><%= link_to "Inbox",   '#' %></li>
+        <li><%= link_to "Inbox",   '/inbox' %></li>
         <li><%= link_to "Your Trips",   '/trips' %></li>
-        <li><%= link_to "Profile",   '#' %></li>
+        <li><%= link_to "Profile",   '/profile' %></li>
         <li><%= link_to "Log Out", '/logout' %></li>
        <% else %>
         <li><%= link_to "Log in", '/auth/facebook' %></li>

@@ -16,6 +16,7 @@ class DashboardsController < ApplicationController
   def create
     params.permit!
     @trip = Trip.new(params[:trip])
+    #prob want to update attributes instead
     current_user.trips.push(@trip)
 
     redirect_to '/dashboard'

@@ -1,13 +1,60 @@
-<h1> Welcome to the Dashboard </h1>
-
 <div class="container-fluid">
-  <div>
-  <%= @user.name %>
+  <div class="row-fluid">
+    <div class="span3">
+        <!--Sidebar content-->
+        <ul>
+        <%= image_tag @user.image + "?type=large" %>
+        <%= @user.name %>
+        <h5> Edit Profile </h5>
+      </ul>
+    </div>
+    <div class="span9">
+      <!--Body content-->
+      <div class="row text-center">
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <p><strong>Inbox</strong></p>
+            <p>10 messages</p>
+            <button class="btn">Open</button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <p><strong>Upcoming Trips</strong></p>
+            <p>3 </p>
+            <button class="btn">Update</button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <p><strong>Past Trips</strong></p>
+            <p>4</p>
+            <button class="btn">Take A Look</button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <p><strong>Ask Me About</strong></p>
+            <p>3</p>
+            <button class="btn">Update</button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <p><strong>Meet me For</strong></p>
+            <p>3</p>
+            <button class="btn">Update</button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <p><strong>Friends</strong></p>
+            <p>10</p>
+            <button class="btn">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-  <%= image_tag @user.image %>
 </div>
-
-<%= render 'dashboards/no_trips' %>
-<%= render 'dashboards/ask_me_about' %>
-<%= render 'dashboards/lets_meet' %>
-<%= render 'dashboards/add_a_trip' %>

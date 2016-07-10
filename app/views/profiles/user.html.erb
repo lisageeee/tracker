@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span3">
+      <!--Sidebar content-->
+      <ul>
+        <%= image_tag @user.image + "?type=large" %>
+        <%= @user.name %>
+        <h5> Edit Profile </h5>
+      </ul>
+    </div>
+    <div class="span9">
+      <!--Body content-->
+      <div class="row text-center">
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <p><strong>Meet me in Paris, France for</strong></p>
+            <p><strong>Coffee</strong></p>
+            <p>Fri. 27 November 2016</p>
+            <button class="btn">Update</button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <p><strong>Meet me in New York for</strong></p>
+            <p><strong>Women in Tech Wellness</strong></p>
+            <p>Sat. 28 November 2016</p>
+            <button class="btn">Update</button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <p><strong>Meet me in Bilbao, Spain for</strong></p>
+            <p><strong>EuroPython</strong></p>
+            <p>Sat. 28 November 2016</p>
+            <button class="btn">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

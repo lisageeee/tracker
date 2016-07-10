@@ -18,4 +18,12 @@ Rails.application.routes.draw do
 
   #trips
   get '/trips/', to: 'trips#show'
+
+  #inbox
+  get '/inbox/', to: 'inboxs#show'
+
+  #profile
+  get 'profiles/new', to: 'profiles#new'
+  get '/profile', to: 'profiles#user', as: 'profile'
+  post '/profile', to: 'profiles#create'
 end
