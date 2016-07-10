@@ -2,8 +2,6 @@
 
 # Contributing
 
-Your contributions are encouraged. Here's how you can make changes to the site.
-
 Fork the repository to your own GitHub account.
 
 Download the project:
