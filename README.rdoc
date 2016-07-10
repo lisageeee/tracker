@@ -1,28 +1,37 @@
-== README
+# SheNomads Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Contributing
 
-Things you may want to cover:
+Your contributions are encouraged. Here's how you can make changes to the site.
 
-* Ruby version
+Fork the repository to your own GitHub account.
 
-* System dependencies
+Download the project:
 
-* Configuration
+```
+  $ git clone git@github.com:SheNomads/tracker.git
+  $ cd tracker
+```
 
-* Database creation
+Install gems:
 
-* Database initialization
+```
+  $ bundle install
+```
 
-* How to run the test suite
+Run the application:
 
-* Services (job queues, cache servers, search engines, etc.)
+```
+  $ rails server
+```
 
-* Deployment instructions
+Make your changes.
 
-* ...
+Commit and push to the remote repository:
 
+```
+  $ git commit -m "Add some feature"
+  $ git push origin master
+```
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Make a pull request.
