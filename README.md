@@ -7,7 +7,7 @@ Fork the repository to your own GitHub account.
 Download the project:
 
 ```
-  $ git clone git@github.com:SheNomads/tracker.git
+  $ git clone https://git@github.com:SheNomads/tracker.git
   $ cd tracker
 ```
 
