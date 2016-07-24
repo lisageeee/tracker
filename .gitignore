@@ -23,3 +23,8 @@ database.yml
 # Ignore Facebook Login Omniauth
 /config/initializers/omniauth.rb
 omniauth.rb
+
+# Ignore secrets
+/config/secrets.yml
+secrets.yml
+

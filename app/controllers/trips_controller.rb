@@ -1,13 +1,6 @@
 class TripsController < ApplicationController
   include SessionsHelper
-
-  def new
-    @trip = Trip.new(params[:trip])
-  end
-
-  def index
-    @trips = Trip.all
-  end
+  expose(:trip)
 
   def show
     params.permit!
