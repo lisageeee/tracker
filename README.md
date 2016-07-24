@@ -25,14 +25,13 @@ Run the application:
 ```
   $ rails server
 ```
-
-Make your changes.
-
-Commit and push to the remote repository:
+## Add A Feature
+1.Make your changes.
+2.Commit and push to the remote repository:
 
 ```
   $ git commit -m "Add some feature"
   $ git push origin master
 ```
 
-Make a pull request.
+3.Make a pull request.
