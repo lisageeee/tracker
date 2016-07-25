@@ -1,6 +1,12 @@
 # SheNomads Tracker
 
 # Contributing
+
+## What you'll need to contribute
+1. Rails 4.2.5.2
+2. Ruby 2.1.3p242
+3. Empathy
+
 ## Fork the Repo
 1. In the top-right corner of the page, click Fork.
 2. On GitHub, navigate to your fork of the Tracker repository.
@@ -27,6 +33,7 @@ Run the application:
 ```
 ## Add A Feature
 1.Make your changes.
+
 2.Commit and push to the remote repository:
 
 ```
