@@ -1,6 +1,9 @@
 class DashboardsController < ApplicationController
   include SessionsHelper
-  expose(:dashboard)
+
+  expose(:dashboard) { DashboardView.new(current_user) }
+  expose(:buttons)   { Buttons.new }
+  expose(:labels)    { Labels.new }
 
   def create
     params.permit!

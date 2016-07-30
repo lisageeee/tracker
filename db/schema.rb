@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160526185310) do
+ActiveRecord::Schema.define(version: 20160730205617) do
 
   create_table "trips", force: :cascade do |t|
     t.text     "city",       limit: 65535
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20160526185310) do
     t.integer  "user_id",    limit: 4
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.string   "activity",   limit: 255
   end
 
   add_index "trips", ["user_id", "created_at"], name: "index_trips_on_user_id_and_created_at", using: :btree
