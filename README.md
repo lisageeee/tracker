@@ -6,6 +6,8 @@
 1. Rails 4.2.5.2
 2. Ruby 2.1.3p242
 3. Empathy
+4. MySql
+5. A sense of humor
 
 ## Fork the Repo
 1. In the top-right corner of the page, click Fork.
@@ -19,6 +21,21 @@
   $ git clone https://github.com/YOUR-USERNAME/tracker
   $ cd tracker
 ```
+
+Install the dependencies:
+
+```
+brew update
+brew install mysql
+```
+
+Setup the database:
+
+```
+cp config/database.yml.example config/database.yml
+
+```
+In the file you just copied (config/database.yml), the username should be "root" and the password should be your computer password.
 
 Install gems:
 
