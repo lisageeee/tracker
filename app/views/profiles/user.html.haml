@@ -1,0 +1,11 @@
+.container-fluid
+  .row-fluid
+    .span3
+      = render "profiles/user_sidebar"
+
+    .span9
+      .row.text-center
+        - user_view.trips.each do |trip|
+          .col-sm-4
+            .thumbnail
+              = render "profiles/activity", trip: trip

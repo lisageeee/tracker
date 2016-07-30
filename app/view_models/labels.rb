@@ -28,4 +28,12 @@ class Labels
     "Take a Look"
   end
 
+  def meet_me_in
+    "Meet me in "
+  end
+
+  def for
+    " for"
+  end
+
 end
