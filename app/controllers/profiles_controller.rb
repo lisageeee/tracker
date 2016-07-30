@@ -1,13 +1,6 @@
 class ProfilesController < ApplicationController
   include SessionsHelper
-
-  def new
-    @profile = Profile.new(params[:profile])
-  end
-
-  def show
-    @profile = Profile.find(params[:id])
-  end
+  expose(:profile)
 
   def create
     params.permit!

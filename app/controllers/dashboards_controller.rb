@@ -1,17 +1,6 @@
 class DashboardsController < ApplicationController
   include SessionsHelper
-
-  def index
-    @dashboards = Dashboard.all
-  end
-
-  def new
-    @dashboard = Dashboard.new(params[:dashboard])
-  end
-
-  def show
-    @dashboard = Dashboard.find(params[:id])
-  end
+  expose(:dashboard)
 
   def create
     params.permit!
