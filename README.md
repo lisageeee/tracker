@@ -49,7 +49,14 @@ Run the application:
   $ rails server
 ```
 ## Add A Feature
-1.Make your changes.
+1.Create a branch that is named after the feature you are working on. 
+For example: 
+
+```
+git co -B add-notes-to-user-profile
+
+```
+
 
 2.Commit and push to the remote repository:
 
