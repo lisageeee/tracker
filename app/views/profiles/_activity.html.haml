@@ -1,0 +1,10 @@
+%p
+  %strong
+    = labels.meet_me_in + trip.city + labels.for
+%p
+  %strong
+    = trip.activity
+%p
+  = activity.format(trip.activity_date)
+%button.btn
+  = buttons.update
