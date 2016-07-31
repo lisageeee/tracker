@@ -1,6 +1,11 @@
 class ProfilesController < ApplicationController
   include SessionsHelper
+
   expose(:profile)
+  expose(:user_view) { UserView.new(current_user) }
+  expose(:buttons)   { Buttons.new }
+  expose(:labels)    { Labels.new }
+  expose(:activity)  { Activity.new }
 
   def create
     params.permit!

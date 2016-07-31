@@ -11,16 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160526185310) do
+ActiveRecord::Schema.define(version: 20160730225744) do
 
   create_table "trips", force: :cascade do |t|
-    t.text     "city",       limit: 65535
-    t.text     "country",    limit: 65535
+    t.text     "city",          limit: 65535
+    t.text     "country",       limit: 65535
     t.datetime "in"
     t.datetime "out"
-    t.integer  "user_id",    limit: 4
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.integer  "user_id",       limit: 4
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "activity",      limit: 255
+    t.datetime "activity_date"
   end
 
   add_index "trips", ["user_id", "created_at"], name: "index_trips_on_user_id_and_created_at", using: :btree
@@ -37,6 +39,7 @@ ActiveRecord::Schema.define(version: 20160526185310) do
     t.string   "image",           limit: 255
     t.string   "token",           limit: 255
     t.datetime "expires_at"
+    t.datetime "activity_date"
   end
 
   add_foreign_key "trips", "users"
