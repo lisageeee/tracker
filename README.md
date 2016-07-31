@@ -32,7 +32,7 @@ brew install mysql
 Setup the database:
 
 ```
-cp config/database.yml.example config/database.yml
+currently looking for some help on creating seed data !!!
 
 ```
 In the file you just copied (config/database.yml), the username should be "root" and the password should be your computer password.
