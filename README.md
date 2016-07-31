@@ -35,7 +35,7 @@ Setup the database:
 currently looking for some help on creating seed data !!!
 
 ```
-In the file you just copied (config/database.yml), the username should be "root" and the password should be your computer password.
+
 
 Install gems:
 
@@ -48,6 +48,23 @@ Run the application:
 ```
   $ rails server
 ```
+
+## Log In with Facebook Omniauth
+1. Copy the example omniauth file
+```
+cp config/initializers/omniauth.rb.example config/initializers/omniauth.rb
+```
+2. Get Facebook authentication 
+https://richonrails.com/articles/facebook-authentication-in-ruby-on-rails
+
+3. Fill in 
+```
+FACEBOOK_APP_ID = 'yourid'
+FACEBOOK_APP_SECRET = 'yoursecret'
+```
+with the ids that Facebook provides.
+
+
 ## Add A Feature
 1.Create a branch that is named after the feature you are working on. 
 For example: 
