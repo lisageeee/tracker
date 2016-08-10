@@ -26,4 +26,6 @@ Rails.application.routes.draw do
   get 'profiles/new', to: 'profiles#new'
   get '/profile', to: 'profiles#user', as: 'profile'
   post '/profile', to: 'profiles#create'
+
+  resource :friends
 end

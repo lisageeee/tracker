@@ -1,0 +1,49 @@
+.col-sm-4
+  .thumbnail
+    %p
+      %strong
+        = labels.inbox
+    %p 10 messages
+    %button.btn
+      Open
+.col-sm-4
+  .thumbnail
+    %p
+      %strong
+        = labels.upcoming_trips
+    %p= dashboard.trip_count
+    %button.btn
+      = buttons.update
+.col-sm-4
+  .thumbnail
+    %p
+      %strong Past Trips
+    %p 4
+    %button.btn
+      = labels.take_a_look
+.col-sm-4
+  .thumbnail
+    %p
+      %strong
+        = labels.ask_me_about
+    %p 3
+    %button.btn
+      = buttons.update
+.col-sm-4
+  .thumbnail
+    %p
+      %strong
+        = labels.meet_me_for
+    %p 3
+    %button.btn
+      = buttons.update
+.col-sm-4
+  .thumbnail
+    %p
+      %strong
+        = labels.friends
+    %p
+      = "3"
+    %button.btn
+      = link_to buttons.update,  friends_path
+
