@@ -32,8 +32,11 @@ brew install mysql
 Setup the database:
 
 ```
-currently looking for some help on creating seed data !!!
+  make copy of: /config/database.yml.example and name it: /config/database.yml
+```  
 
+```
+currently looking for some help on creating seed data !!!
 ```
 
 
@@ -41,6 +44,26 @@ Install gems:
 
 ```
   $ bundle install
+```
+
+Create/migrate the database:
+
+(Makes sure MySQL server is started)
+
+```
+  $ mysql.server start
+```
+
+(You only have to do this once)
+
+```
+  $ bundle exec rake db:create
+```
+
+(Do this once at the beginning, and then anytime you want to modify table structures)
+
+```
+  $ bundle exec rake db:migrate
 ```
 
 Run the application:
@@ -71,7 +94,6 @@ For example:
 
 ```
 git co -B add-notes-to-user-profile
-
 ```
 
 
