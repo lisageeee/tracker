@@ -7,6 +7,7 @@ gem 'bootstrap-will_paginate', '~> 0.0.10'
 gem 'decent_exposure', '3.0.0'
 gem 'jquery-rails'
 gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 gem 'rfc-822'
 gem 'will_paginate', '~> 3.1'
 

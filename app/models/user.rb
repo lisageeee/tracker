@@ -8,7 +8,8 @@ class User < ActiveRecord::Base
       user.name = auth.info.name
       user.image = auth.info.image
       user.token = auth.credentials.token
-      user.expires_at = Time.at(auth.credentials.expires_at)
+      # Twitter doesn't return expires_at, so we need to try and then handle gracefully
+      user.expires_at = auth['credentials'].try(:[],'expires_at') ? Time.at(auth['credentials'].try(:[],'expires_at')) : nil
       user.save!
     end
   end

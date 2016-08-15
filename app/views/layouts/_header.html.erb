@@ -16,7 +16,8 @@
         <li><%= link_to "Profile",   '/profile' %></li>
         <li><%= link_to "Log Out", '/logout' %></li>
        <% else %>
-        <li><%= link_to "Log in", '/auth/facebook' %></li>
+        <li><%= link_to "Log in Via Facebook", '/auth/facebook' %></li>
+        <li><%= link_to "Log in Via Twitter", '/auth/twitter' %></li>
        <% end %>
       </ul>
     </nav>
