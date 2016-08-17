@@ -18,7 +18,10 @@ class UserView
   end
 
   def image_size
-    # adding an image size to the Twitter profile link breaks it; if setting a size is necessary, perhaps create a class and apply it to this image tag?
-    "?type=large"
+    if user.provider == "facebook"
+      "?type=large"
+    else
+      ""
+    end
   end
 end

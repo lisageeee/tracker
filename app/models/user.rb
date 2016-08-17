@@ -8,9 +8,19 @@ class User < ActiveRecord::Base
       user.name = auth.info.name
       user.image = auth.info.image
       user.token = auth.credentials.token
-      # Twitter doesn't return expires_at, so we need to try and then handle gracefully
-      user.expires_at = auth['credentials'].try(:[],'expires_at') ? Time.at(auth['credentials'].try(:[],'expires_at')) : nil
+      user.expires_at = auth.check_for_expires_at_returned()
       user.save!
     end
   end
+  
+  private
+  
+  def check_for_expires_at_returned()
+    if (auth.credentials.expires_at)
+      Time.at(auth.credentials.expires_at)
+    else
+      nil
+    end
+  end
+  
 end
