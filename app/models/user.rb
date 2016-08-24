@@ -8,8 +8,19 @@ class User < ActiveRecord::Base
       user.name = auth.info.name
       user.image = auth.info.image
       user.token = auth.credentials.token
-      user.expires_at = Time.at(auth.credentials.expires_at)
+      user.expires_at = auth.check_for_expires_at_returned()
       user.save!
     end
   end
+  
+  private
+  
+  def check_for_expires_at_returned()
+    if (auth.credentials.expires_at)
+      Time.at(auth.credentials.expires_at)
+    else
+      nil
+    end
+  end
+  
 end

@@ -18,6 +18,10 @@ class UserView
   end
 
   def image_size
-    "?type=large"
+    if user.provider == "facebook"
+      "?type=large"
+    else
+      ""
+    end
   end
 end
