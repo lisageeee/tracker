@@ -13,6 +13,26 @@ class UserView
     user.name
   end
 
+  def nickname
+    user.nickname
+  end
+
+  def first_name
+    user.first_name
+  end
+
+  def last_name
+    user.last_name
+  end
+
+  def location
+    user.location
+  end
+
+  def description
+    user.description
+  end
+
   def trips
     user.trips
   end

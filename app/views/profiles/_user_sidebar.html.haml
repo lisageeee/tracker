@@ -1,3 +1,8 @@
-%ul
-  = image_tag user_view.image + user_view.image_size
-  = user_view.name
+%ul.profile
+  %li= image_tag user_view.image + user_view.image_size
+  %li= "name: " + user_view.name
+  %li= "nickname: " + user_view.nickname
+  %li= "first_name: " + user_view.first_name
+  %li= "last_name: " + user_view.last_name
+  %li= "location: " + user_view.location
+  %li= "description: " + user_view.description

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160730225744) do
+ActiveRecord::Schema.define(version: 20160907132857) do
 
   create_table "trips", force: :cascade do |t|
     t.text     "city",          limit: 65535
@@ -40,6 +40,11 @@ ActiveRecord::Schema.define(version: 20160730225744) do
     t.string   "token",           limit: 255
     t.datetime "expires_at"
     t.datetime "activity_date"
+    t.string   "nickname",        limit: 255
+    t.string   "first_name",      limit: 255
+    t.string   "last_name",       limit: 255
+    t.string   "location",        limit: 255
+    t.string   "description",     limit: 255
   end
 
   add_foreign_key "trips", "users"
