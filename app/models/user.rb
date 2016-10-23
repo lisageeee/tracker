@@ -6,6 +6,24 @@ class User < ActiveRecord::Base
       user.provider = auth.provider
       user.uid = auth.uid
       user.name = auth.info.name
+      user.nickname = auth.info.nickname
+      
+      fname = auth.info.first_name
+      fname = "" if fname.blank?
+      user.first_name = fname
+
+      lname = auth.info.last_name
+      lname = "" if lname.blank?
+      user.last_name = lname
+
+      location = auth.info.location
+      location = "" if location.blank?
+      user.location = location      
+
+      description = auth.info.description
+      description = "" if description.blank?
+      user.description = description  
+
       user.image = auth.info.image
       user.token = auth.credentials.token
       user.expires_at = auth.check_for_expires_at_returned()

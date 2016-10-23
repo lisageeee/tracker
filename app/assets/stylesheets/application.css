@@ -83,3 +83,7 @@ p {
   color: #fff;
   text-decoration: none;
 }
+
+ul.profile {
+  list-style-type: none;
+}
